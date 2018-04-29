@@ -1,0 +1,30 @@
+﻿  Checking Build System
+  CMake is re-running because D:/Users/Avokado/Documents/Programmering/GFX prog/gfx project/gfx project/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'D:/Users/Avokado/Documents/Programmering/GFX prog/gfx project/gfx project/CMakeLists.txt'
+    is newer than 'D:/Users/Avokado/Documents/Programmering/GFX prog/gfx project/gfx project/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.15063.0 to target Windows 10.0.16299.
+  -- Could NOT find Vulkan (missing: VULKAN_LIBRARY VULKAN_INCLUDE_DIR) 
+  -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+  -- Using Win32 for window creation
+  -- Shared libraries disabled
+  -- Looking for DirectX...
+  -- DirectX_PREFIX_PATH changed.
+  -- Found DirectX: C:/Program Files (x86)/Windows Kits/10/Lib/10.0.15063.0/um/x86/d3d9.lib
+  -- DX lib dir: C:/Program Files (x86)/Windows Kits/10/Lib/10.0.15063.0/um/x86
+  -- Looking for ZLIB...
+  -- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+  -- Could not locate ZLIB
+  -- compiling zlib from souces
+  -- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+  -- Could NOT find rt (missing: RT_LIBRARY) 
+  -- Enabled formats: AMF 3DS AC ASE ASSBIN ASSXML B3D BVH COLLADA DXF CSM HMP IRRMESH IRR LWO LWS MD2 MD3 MD5 MDC MDL NFF NDO OFF OBJ OGRE OPENGEX PLY MS3D COB BLEND IFC XGL FBX Q3D Q3BSP RAW SIB SMD STL TERRAGEN 3D X X3D GLTF 3MF MMD
+  -- Disabled formats:
+  -- Could NOT find IL (missing: IL_LIBRARIES IL_INCLUDE_DIR) 
+  CMake Warning at assimp/CMakeLists.txt:439 (MESSAGE):
+    Build of assimp_qt_viewer is disabled.  Unsatisfied dendencies: Qt5 DevIL
+  
+  
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: D:/Users/Avokado/Documents/Programmering/GFX prog/gfx project/gfx project/build
