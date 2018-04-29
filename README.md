@@ -8,4 +8,4 @@ This project only supports windows.
 
 -generate using cmake
 
--compile in prefered interpreter (C17 support required)
+-compile in prefered interpreter (C++17 support required)
