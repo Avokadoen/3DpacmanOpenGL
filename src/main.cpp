@@ -24,16 +24,9 @@
 // camera should have a shared pointer for view and projection 
 // models should observe these two variables using weak pointers
 
-void error_callback(int error, const char* description)
-{
-	std::cout << "Error " << error << ": " << description;
-}
+void error_callback(int error, const char* description);
+static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GLFW_TRUE);
-}
 
 int main() {
 
@@ -42,7 +35,6 @@ int main() {
 		// Initialization failed
 		return -4;
 	}
-
 
 	GLFWwindow* window = glfwCreateWindow(glob::WINDOW_X, glob::WINDOW_Y, glob::WINDOW_NAME.c_str(), nullptr, nullptr); // glfwGetPrimaryMonitor()
 	if (!window)
@@ -75,7 +67,7 @@ int main() {
 	glfwGetFramebufferSize(window, &width, &height);
 	glViewport(0, 0, width, height);
 
-	glfwSwapInterval(0);
+	glfwSwapInterval(1);
 	
 	Game game;
 	game.initPacman("assets/levels/level0");
@@ -136,3 +128,13 @@ int main() {
 
 }
 
+void error_callback(int error, const char* description)
+{
+	std::cout << "Error " << error << ": " << description;
+}
+
+static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GLFW_TRUE);
+}
