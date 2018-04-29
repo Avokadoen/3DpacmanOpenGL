@@ -1,11 +1,11 @@
 # 3DpacmanOpenGL
-This project only supports windows. 
+This project only supports windows. Please don't use this code as an example on how to do things. 
 
 # to build
--go to directory using cmake
+- go to directory using cmake
 
--configue using cmake
+- configue using cmake
 
--generate using cmake
+- generate using cmake
 
--compile in prefered interpreter (C17 support required)
+- compile in preffered interpreter (CXX17 support required)
