@@ -84,7 +84,7 @@ int main() {
 	while (!glfwWindowShouldClose(window))
 	{
 		if (game.gameState == glob::DEAD) {
-			game.initPacman("assets/levels/level0");
+			game.initPacman("assets/levels/level1");
 			game.gameState = glob::PLAYING;
 		}
 
