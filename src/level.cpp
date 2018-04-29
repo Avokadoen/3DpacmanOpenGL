@@ -145,18 +145,18 @@ bool Level::loadModel(std::string path, Render& wallrender, Render& floorRender,
 				}
 				else if(indexX == dimX - 1) {
 					teleportDir.push_back(glob::LEFT);
-					pos.x = levelScale * (indexX)-boxScale * 2;
+					pos.x = levelScale * (indexX)-boxScale * 3;
 					pos.y = levelScale * (indexY)-boxScale;
 				}
 				else if (indexY == 0) {
-					teleportDir.push_back(glob::UP);
-					pos.x = levelScale * (indexX)+boxScale;
-					pos.y = levelScale * (indexY)+boxScale * 2;
-				}
-				else if (indexY == dimY - 1) {
 					teleportDir.push_back(glob::DOWN);
 					pos.x = levelScale * (indexX)+boxScale;
-					pos.y = levelScale * (indexY)-boxScale * 2;
+					pos.y = levelScale * (indexY)+boxScale * 3;
+				}
+				else if (indexY == dimY - 1) {
+					teleportDir.push_back(glob::UP);
+					pos.x = levelScale * (indexX)+boxScale;
+					pos.y = levelScale * (indexY)-boxScale * 3;
 				}
 				teleportPos.push_back(pos);
 			}
@@ -195,77 +195,7 @@ void Level::overrideHitbox(Render& wallRender, std::array<std::array<int, glob::
 		
 		}
 	}
-	/*
-	for (int i = 0; i < dimY; i++) {
-		for (int j = 0; j < dimX; j++) {
-			if (verticesData[i][j] == 1) {
-
-
-				if (i > 0 && verticesData[i - 1][j] == 0) {
-					createVertexDataFromIndex(wallRender, j, i);
-				}
-				else if (i < dimY - 1 && verticesData[i + 1][j] == 0) {
-					createVertexDataFromIndex(wallRender, j, i);
-				}
-				else if (j > 0 && verticesData[i][j - 1] == 0) {
-					createVertexDataFromIndex(wallRender, j, i);
-				}
-				else if (j < dimX - 1 && verticesData[i][j + 1] == 0) {
-					createVertexDataFromIndex(wallRender, j, i);
-				}
-
-			}
-		}
-	}
-	*/
-	/*std::array<std::array<bool, glob::MAX_LEVEL_SIZE>, glob::MAX_LEVEL_SIZE> pointCleared;
-
-	for (auto&& line : pointCleared) {
-		for (auto&& point : line) {
-			point = false;
-		}
-	}
-
-	while (!done) {
-		for (int i = 0; i < dimY; i++) {
-			for (int j = 0; j < dimX; j++) {
-				if(pointCleared[i][j] == false){
-					pointCleared[i][j] = true;
-					if (verticesData[i][j] == 1) {
-						hitBoxStartTop[0] = i;
-						hitBoxStartTop[1] = j;
-					}
-					while (verticesData[i][j] == 1 && j < dimX && !pointCleared[i][j]) {
-						hitBoxEndbottom[1] = j;
-						j++;
-						pointCleared[i][j] = true;
-					}
-					hitBoxEndbottom[0] = i;
-			
-					bool completeIteration = true;
-					// TODO: deal with last ints
-					while (completeIteration && !pointCleared[i][j]) {
-						hitBoxEndbottom[0] = i;
-						i++;
-						for (int j = hitBoxStartTop[1]; j <= hitBoxEndbottom[1] && !pointCleared[i][j]; j++) {
-							pointCleared[i][j] = true;
-
-							if (verticesData[i][j] == 0) {
-						
-								i = hitBoxStartTop[0];
-								j = hitBoxEndbottom[1] + 1;
-						
-								completeIteration = false;
-								break;
-							}
-						}
-					}
-				}
-			}
-			// make hitbox here
-			createVertexDataFromIndex(wallRender, hitBoxStartTop, hitBoxEndbottom);
-		}
-	}*/
+	
 }
 
 void Level::createVertexDataFromIndex(Render& wallRender, int startX, int endX, int indexY) {
