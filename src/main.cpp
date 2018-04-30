@@ -16,13 +16,17 @@
 #include <gtc/type_ptr.hpp>
 
 
-// TODO: fix texture loading (se en gul pacman!!!!!1!)
-
-
-
 // camera class:
 // camera should have a shared pointer for view and projection 
 // models should observe these two variables using weak pointers
+
+
+/*
+	Because of lack of structure and logic when giving classes a task 
+	there will be a note like this in all of the .cpp files that gives a short
+	insight in what they actually do
+
+*/
 
 void error_callback(int error, const char* description);
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);

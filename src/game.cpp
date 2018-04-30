@@ -4,10 +4,8 @@
 
 /*
 	Game class is a class that "hacks" our backend code to create pacman
-	as the backend code is incomplete.
+	as the backend code is incomplete. It also contains most of the game logic
 */
-
-// Hovedproblem: ghost får ikke snu.
 
 Game::Game() {
 	camera = std::make_shared<Camera>();

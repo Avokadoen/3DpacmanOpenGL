@@ -6,6 +6,10 @@
 	loading model data: https://learnopengl.com/Model-Loading/Model
 */
 
+/*
+	this class does the mesh/model loading other than that it can be mostly ignored.
+*/
+
 std::vector<glob::Texture> Model::textures_loaded;
 
 Model::Model() {

@@ -2,6 +2,10 @@
 
 #include "gtc/matrix_transform.hpp"
 
+/*
+	This class can be ignored in this project
+*/
+
 Mesh::Mesh() {
 	transform = glm::mat4(1.0f);
 }

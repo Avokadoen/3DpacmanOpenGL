@@ -1,5 +1,12 @@
 #include "score.hpp"
 
+/*
+	This class exist for dealing with a custom render that can update
+	vao data so that when pacman picks up score it can be represented in
+	the game
+
+*/
+
 void Score::deleteIndices(int index) {
 	indices.erase(indices.begin() + index * indicesStride, indices.begin() + index * indicesStride + indicesStride);
 	hitboxes.erase(hitboxes.begin() + index, hitboxes.begin() + index + 1);

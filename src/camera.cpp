@@ -1,5 +1,10 @@
 #include "camera.hpp"
 
+/*
+	This class is used by all objects that are drawn to get a nice projection
+	for our view that is also contained within camera
+*/
+
 Camera::Camera() {
 	position = glm::vec3(3.5f, -6.0f, 13.0f);
 
@@ -16,7 +21,6 @@ Camera::Camera() {
 
 void Camera::newView(glm::vec3 pos, glm::vec3 target) {
 	position = pos;
-
 
 	view = glm::lookAt(
 		position,

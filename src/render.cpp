@@ -14,6 +14,12 @@
 	(updater / controller task)
 */
 
+/*
+	The render class has been modified to deal with a lot the local game logic for a
+	object. There is no logical reason for this being there other then easy access and
+	allowed use to achieve a lot of the desired game logic in a fast way
+*/
+
 
 Render::Render() {
 	// TODO: this should be done by parent/controller (class controlling renderer and updater)

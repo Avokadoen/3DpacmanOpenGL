@@ -1,5 +1,10 @@
 #include "level.hpp"
 
+/*
+	this class is used by the game class to initialize a level
+	and can create 3D data from level files
+*/
+
 Level::Level(std::string path, Render& wallrender, Render& floorRender, Render& teleportRender, Score& scoreRender) :  Model() {
 	if (!loadModel(path, wallrender, floorRender, teleportRender, scoreRender)) {
 		throw std::runtime_error("failed loading level. maybe path is invalid?");
